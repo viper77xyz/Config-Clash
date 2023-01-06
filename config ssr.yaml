@@ -35,6 +35,7 @@ proxy-groups:
   - name: Sosmed
     type: select
     proxies:
+      - DIRECT
       - REJECT
     use:
       - SSR
@@ -67,7 +68,7 @@ rule-providers:
     interval: 86400
   sosmed:
     type: http
-    behavior: classical
+    behavior: domain
     path: "./sosmedv3.yaml"
     url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/sosmedv3.yaml
     interval: 86400
