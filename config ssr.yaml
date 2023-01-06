@@ -4,6 +4,7 @@ proxy-providers:
   SSR:
     type: http
     path: "./ssr.yaml"
+    url: https://raw.githubusercontent.com/viper77xyz/Config-Clash/main/ssr.yaml
     interval: 3600
     health-check:
       enable: true
