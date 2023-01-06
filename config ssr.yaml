@@ -32,13 +32,6 @@ proxy-groups:
       - REJECT
     use:
       - SSR
-  - name: Sosmed
-    type: select
-    proxies:
-      - DIRECT
-      - REJECT
-    use:
-      - SSR
   - name: Tiktok
     type: select
     proxies:
@@ -66,12 +59,6 @@ rule-providers:
     path: "./mlffpubghdi.yaml"
     url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/mlffpubghdi.yaml
     interval: 86400
-  sosmed:
-    type: http
-    behavior: domain
-    path: "./sosmedv3.yaml"
-    url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/sosmedv3.yaml
-    interval: 86400
   roblox:
     type: http
     behavior: classical
@@ -87,7 +74,6 @@ rule-providers:
 rules:
   - RULE-SET,Download,GugelFamily
   - RULE-SET,Game,Gaming
-  - RULE-SET,sosmed,Sosmed
   - RULE-SET,roblox,Roblox
   - RULE-SET,tiktok,Tiktok
   - MATCH,UMUM
