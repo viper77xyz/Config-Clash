@@ -1,0 +1,89 @@
+proxies:
+  - name: France
+    server: 94.23.116.190
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: HowdyBypasser2022
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: Herza
+    server: 103.173.75.170
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: bypasser2021newPass2022
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: IKD
+    server: 103.180.125.250
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: bypasser2021newPass2022
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: HE
+    server: 103.253.24.245
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: vpngame2021zxc
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: CTB1
+    server: 109.123.237.51
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: HowdyBypasser2022
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: CTB2
+    server: 109.123.237.52
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: HowdyBypasser2022
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: CTB3
+    server: 109.123.237.53
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: HowdyBypasser2022
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true
+  - name: OVH
+    server: 51.79.222.99
+    port: 443
+    type: ssr
+    cipher: aes-256-ctr
+    password: bypasser2020qwerty
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param:
+    obfs-param: zoom.us
+    udp: true

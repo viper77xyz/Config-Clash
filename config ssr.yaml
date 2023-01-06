@@ -1,0 +1,91 @@
+---
+proxies:
+proxy-providers:
+  SSR:
+    type: http
+    path: "./ssr.yaml"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 86400
+proxy-groups:
+  - name: UMUM
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+    use:
+      - SSR
+  - name: GugelFamily
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+    use:
+      - SSR
+  - name: Gaming
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+    use:
+      - SSR
+  - name: Sosmed
+    type: select
+    proxies:
+      - REJECT
+    use:
+      - SSR
+  - name: Tiktok
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+    use:
+      - SSR
+  - name: Roblox
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+    use:
+      - SSR
+rule-providers:
+  Download:
+    type: http
+    behavior: domain
+    path: "./download.yaml"
+    url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/download.yaml
+    interval: 86400
+  Game:
+    type: http
+    behavior: classical
+    path: "./mlffpubghdi.yaml"
+    url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/mlffpubghdi.yaml
+    interval: 86400
+  sosmed:
+    type: http
+    behavior: classical
+    path: "./sosmedv3.yaml"
+    url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/sosmedv3.yaml
+    interval: 86400
+  roblox:
+    type: http
+    behavior: classical
+    path: "./roblox.yaml"
+    url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/roblox.yaml
+    interval: 86400
+  tiktok:
+    type: http
+    behavior: domain
+    path: "./tiktok.yaml"
+    url: https://raw.githubusercontent.com/viper77xyz/Rule-Clash/main/tiktok.yaml
+    interval: 86400
+rules:
+  - RULE-SET,Download,GugelFamily
+  - RULE-SET,Game,Gaming
+  - RULE-SET,sosmed,Sosmed
+  - RULE-SET,roblox,Roblox
+  - RULE-SET,tiktok,Tiktok
+  - MATCH,UMUM
